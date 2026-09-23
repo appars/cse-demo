@@ -3,8 +3,8 @@ public class StudentResult {
     public static void main(String[] args) {
 
         String studentName = "Rahul";
-        int totalMarks = 420;
-        int numberOfSubjects = 5;
+        int totalMarks = 520;
+        int numberOfSubjects = 6;
 
         int average = totalMarks / numberOfSubjects;
 
