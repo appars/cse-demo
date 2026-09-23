@@ -7,7 +7,7 @@ public class StudentResult {
         int numberOfSubjects = 5;
 
         int average = totalMarks / numberOfSubjects;
-
+        // test
         System.out.println("Student: " + studentName);
         System.out.println("Average: " + average);
 
