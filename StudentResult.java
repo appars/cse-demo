@@ -2,9 +2,9 @@ public class StudentResult {
 
     public static void main(String[] args) {
 
-        String studentName = "Rahul";
-        int totalMarks = 420;
-        int numberOfSubjects = 5;
+        String studentName = "Appar";
+        int totalMarks = 590;
+        int numberOfSubjects = 6;
 
         int average = totalMarks / numberOfSubjects;
 
