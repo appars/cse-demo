@@ -79,7 +79,7 @@ public class ByteBites {
 
         // Display order summary
         System.out.println("==========================================");
-        System.out.println("          BYTEBITES ORDER SUMMARY");
+        System.out.println("          BYTEBITES ORDER SUMMARY - CMRIT");
         System.out.println("==========================================");
 
         System.out.println("Customer       : " + customerName);
