@@ -1,29 +1,74 @@
-# ByteBites — Quick Pull Request Review Demo
+# ByteBites — CMRIT Campus Food Delivery
 
-A tiny single-file Java application for a CMRIT PTR classroom demonstration.
+A simple Java console application used for demonstrating:
 
-## Business requirement
+- Git branching
+- Pull Requests
+- Code Review
+- GitHub Copilot Code Review
+- Boundary-value thinking
+- Human review vs AI-assisted review
 
-CMRIT students receive a **10% discount when the order amount is ₹500 or more**.
+> **Classroom Demo:** The application is intentionally small so that developers can focus on reviewing the code rather than understanding a complex application.
 
-The application also calculates the amount per person when an order is shared.
+---
 
-## Intended classroom exercise
+## Business Scenario
 
-Review the feature change and look for:
+**ByteBites** is a fictional food-delivery service for students on the CMRIT campus.
 
-- Boundary/logic correctness
-- Hardcoded business values
-- Meaningful variable names
-- Boundary/error handling
+A student can order food such as:
 
-The feature version intentionally contains review findings for the classroom exercise.
+- Debug Burger
+- Bug-Fix Fries
+- Stack Overflow Shake
 
-## Run
+The application calculates the customer's final bill.
 
-```bash
-javac ByteBites.java
-java ByteBites
-```
+---
 
-The normal demonstration uses two people, so the normal execution completes successfully.
+# Business Requirements
+
+The following requirements represent the expected behaviour of the application.
+
+## R1 — Student Discount
+
+CMRIT students receive a **10% discount** when the order subtotal is **₹500 or more**.
+
+Examples:
+
+| Subtotal | Student | Discount |
+|---:|:---:|---:|
+| ₹499 | Yes | No |
+| ₹500 | Yes | 10% |
+| ₹501 | Yes | 10% |
+
+Non-CMRIT students do not receive the student discount.
+
+---
+
+## R2 — Delivery Charge
+
+Delivery is:
+
+- **FREE** when the order subtotal is ₹500 or more
+- **₹40** when the order subtotal is below ₹500
+
+Examples:
+
+| Subtotal | Delivery |
+|---:|---:|
+| ₹499 | ₹40 |
+| ₹500 | FREE |
+| ₹501 | FREE |
+
+---
+
+## R3 — GST
+
+GST is **5%**.
+
+GST is calculated on:
+
+```text
+Amount after discount + Delivery charge
